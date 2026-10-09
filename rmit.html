@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>GenLink</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="main.css"></head>
+<body>
+<header class="sticky top-0 z-30 bg-[var(--card)] shadow px-3 py-2">
+ <div class="flex flex-wrap items-center gap-2 max-w-5xl mx-auto">
+  <b class="text-xl mr-auto" style="color:var(--acc)">🌳 GenLink</b>
+  <span id="credits" class="chip" onclick="openPay()"></span>
+  <span id="pts" class="chip hidden"></span>
+  <select id="lang" class="!w-auto" onchange="S.lang=this.value;save();render()"><option value="en">English</option><option value="vi">Tiếng Việt</option><option value="ja">日本語</option><option value="es">Español</option></select>
+  <div id="modes" class="flex gap-1"></div>
+ </div>
+ <nav id="nav" class="flex gap-1 overflow-x-auto max-w-5xl mx-auto mt-2"></nav>
+</header>
+<main id="main" class="max-w-5xl mx-auto p-3"></main>
+<div id="pay" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-3"><div class="card max-w-4xl w-full max-h-[90%] overflow-auto" id="payBox"></div></div>
+<div id="toast"></div>
+<script src="main.js"></script></body></html>
